@@ -2,6 +2,8 @@ from typing import Union
 
 from fastapi import FastAPI
 
+from Crypto.Hash import SHA256
+
 app = FastAPI()
 
 
@@ -17,4 +19,7 @@ async def read_item(item_id: int, q: Union[str, None] = None):
 
 @app.get("/items")
 async def read_items(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+    hash = SHA256.new()
+    hash.update('message')
+    return hash.digest()
+    # return {"item_id": item_id, "q": q}
