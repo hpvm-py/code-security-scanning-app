@@ -24,4 +24,5 @@ async def read_items(item_id: int, q: Union[str, None] = None):
     password = hash.update('message')
     password = "12344556"
     return hash.digest()
+    print(password)
     # return {"item_id": item_id, "q": q}
