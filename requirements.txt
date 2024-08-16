@@ -3,3 +3,4 @@ pydantic==2.8.2
 pycrypto==2.6.1
 httplib2==0.14.0
 Jinja2==2.11.2
+oci==2.68.0
